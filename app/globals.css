@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark theme only */
+  --bg-primary: #000000;
+  --bg-secondary: rgba(255, 255, 255, 0.02);
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-subtle: rgba(255, 255, 255, 0.4);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --dot-color: rgba(255, 255, 255, 0.05);
+  --dock-bg: rgba(0, 0, 0, 0.8);
+  --dock-border: rgba(255, 255, 255, 0.1);
+  --dock-item-hover: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-focus: rgba(255, 255, 255, 0.2);
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover: rgba(255, 255, 255, 0.9);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+/* Enhanced dot grid background */
+.dot-grid {
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+.dot-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 1px 1px, var(--dot-color) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dot-grid > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Minimal card styles */
+.minimal-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.minimal-card:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+/* Dock navigation */
+.dock {
+  background: var(--dock-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--dock-border);
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dock-item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-center: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  padding: 0 12px;
+  min-width: 40px;
+  cursor: pointer;
+}
+
+.dock-item-with-text {
+  padding: 0 16px;
+  min-width: auto;
+}
+
+.dock-item:hover {
+  background: var(--dock-item-hover);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.dock-item.active {
+  background: var(--dock-item-hover);
+  color: var(--text-primary);
+}
+
+.dock-item-text {
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Text utilities */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-subtle {
+  color: var(--text-subtle) !important;
+}
+
+/* Form styles */
+input,
+textarea {
+  background: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--input-focus) !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Button styles */
+button[type="submit"] {
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: var(--button-hover) !important;
+  transform: translateY(-1px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Border utilities */
+.border-white\/5 {
+  border-color: var(--border-color) !important;
+}
+
+/* Background utilities */
+.bg-gray-900 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+/* Responsive dock adjustments */
+@media (max-width: 640px) {
+  .dock {
+    padding: 8px 16px;
+  }
+
+  .dock-item {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+  }
+
+  .dock-item-with-text {
+    padding: 0 12px;
+  }
+
+  .dock-item-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* Ensure proper cursor styles */
+a,
+button,
+[role="button"],
+.cursor-pointer {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  cursor: text;
+}
+
+/* Hover effects for interactive elements */
+a:hover,
+button:hover,
+[role="button"]:hover {
+  transition: all 0.2s ease;
+}
