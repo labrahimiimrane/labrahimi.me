@@ -134,7 +134,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-6 py-3 rounded-lg flex items-center justify-center space-x-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-fit ml-auto px-6 py-3 rounded-lg flex items-center justify-center space-x-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

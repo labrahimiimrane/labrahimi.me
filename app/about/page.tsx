@@ -42,7 +42,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             {/* Profile Image */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start md:sticky md:top-[30px]">
               <div className="relative">
                 <div
                   className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500"

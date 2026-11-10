@@ -75,38 +75,38 @@ export default function Contact() {
               <p className="text-sm text-subtle mb-3">Where to find me</p>
               <div className="flex space-x-4">
                 {socialLinks.github && (
-                  <a
-                    href={socialLinks.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted hover:text-primary transition-colors"
-                    title="GitHub"
-                  >
-                    <Github size={20} />
-                  </a>
-                )}
-                {socialLinks.linkedin && (
-                  <a
-                    href={socialLinks.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted hover:text-primary transition-colors"
-                    title="LinkedIn"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                )}
-                {socialLinks.x && (
-                  <a
-                    href={socialLinks.x}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted hover:text-primary transition-colors"
-                    title="X"
-                  >
-                    <XIcon size={20} />
-                  </a>
-                )}
+                        <a
+                          href={socialLinks.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
+                          title="GitHub"
+                        >
+                          <Github size={16} />
+                        </a>
+                      )}
+                      {socialLinks.linkedin && (
+                        <a
+                          href={socialLinks.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
+                          title="LinkedIn"
+                        >
+                          <Linkedin size={16} />
+                        </a>
+                      )}
+                      {socialLinks.x && (
+                        <a
+                          href={socialLinks.x}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
+                          title="X"
+                        >
+                          <XIcon size={16} />
+                        </a>
+                      )}
               </div>
             </div>
           </div>
