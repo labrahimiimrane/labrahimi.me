@@ -17,6 +17,13 @@ import {
 import { XIcon } from "@/components/icons/x-icon"
 import { personalInfo, experience, education, skills, contactInfo, socialLinks } from "@/lib/data"
 
+const skillLabels = {
+  frontend: "Frontend Development",
+  backend: "Backend Development",
+  database: "Databases",
+  cms: "Content Management",
+};
+
 export default function About() {
   return (
     <div className="min-h-screen dot-grid">
@@ -27,8 +34,9 @@ export default function About() {
             <h1 className="text-3xl font-light mb-4" style={{ color: "var(--text-primary)" }}>
               About Me
             </h1>
-            <p className="text-lg text-muted leading-relaxed">
-              Passionate full-stack developer with 5 years of experience crafting digital experiences
+            <p className="max-w-2xl text-lg text-muted leading-relaxed m-auto">
+              Full-stack developer with 6+ years of experience building responsive
+              websites with WordPress, Next.js, and other modern technologies.
             </p>
           </div>
 
@@ -150,6 +158,7 @@ export default function About() {
                     <Link
                       href="/contact"
                       className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
+                      download
                     >
                       <span>Download Resume</span>
                       <Download size={16} />
@@ -167,20 +176,20 @@ export default function About() {
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Code size={20} className="text-muted" />
               <h2 className="text-3xl font-light" style={{ color: "var(--text-primary)" }}>
-                Skills & Technologies
+                Technical Skills
               </h2>
             </div>
-            <p className="text-muted max-w-2xl mx-auto">Technologies and tools I use to bring ideas to life</p>
+            <p className="text-muted max-w-2xl mx-auto">Tools and technologies I use to build responsive, engaging web experiences.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.entries(skills).map(([category, skillList]) => (
               <div key={category} className="minimal-card p-6 hover:scale-[1.02] transition-all duration-300 group">
                 <h3
-                  className="text-lg font-medium mb-4 capitalize text-center"
+                  className="text-lg font-medium mb-4 text-center"
                   style={{ color: "var(--text-primary)" }}
                 >
-                  {category}
+                  {skillLabels[category as keyof typeof skillLabels] ?? category}
                 </h3>
                 <div className="space-y-3">
                   {skillList.map((skill) => (
@@ -203,10 +212,10 @@ export default function About() {
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Briefcase size={20} className="text-muted" />
               <h2 className="text-3xl font-light" style={{ color: "var(--text-primary)" }}>
-                Work Experience
+                Professional Experience
               </h2>
             </div>
-            <p className="text-muted max-w-2xl mx-auto">My professional journey and key accomplishments</p>
+            <p className="text-muted max-w-2xl mx-auto">An overview of my professional background.</p>
           </div>
 
           <div className="space-y-8">
@@ -294,22 +303,21 @@ export default function About() {
               Let's Work Together
             </h2>
             <p className="text-muted mb-8 max-w-2xl mx-auto">
-              I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your
-              ideas to life.
+              Have a website or digital project in mind? Let’s talk about how I can help bring it to life.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
               >
-                <span>Get In Touch</span>
+                <span>Get in touch</span>
                 <ArrowRight size={16} />
               </Link>
               <Link
                 href="/projects"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg font-medium hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <span>View My Work</span>
+                <span>Explore my work</span>
                 <ArrowRight size={16} />
               </Link>
             </div>

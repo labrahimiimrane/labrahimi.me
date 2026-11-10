@@ -2,31 +2,31 @@ export const personalInfo = {
   name: "Labrahimi Imrane",
   title: "Full Stack Web Developer",
   location: "Casablanca, Morocco",
-  status: "Full-time at agency, available for freelance",
+  status: "Available for work and freelance projects",
   email: "labrahimiimrane@gmail.com",
   phone: "+212 609-936524",
   bio: [
-    "I'm a web developer with 5 years of experience building custom WordPress websites based on Figma or XD designs.",
-    "I handle both front-end and back-end development — from converting designs with HTML, CSS, JavaScript, and GSAP to creating custom themes, fields, and functionalities in WordPress using PHP.",
+    "I build responsive websites that bring design concepts to life, using WordPress and modern web technologies to create clear, engaging user experiences.",
+    "My work includes front-end development with HTML, CSS, JavaScript, and GSAP, as well as custom WordPress themes, fields, and functionality with PHP.",
   ],
   avatar: "/avatar.jpeg",
 }
 
 export const experience = [
   {
-    role: "Full-stack Web Developer",
+    role: "Full-Stack Web Developer",
     company: "Eliott & Markus.",
-    period: "2019 — Present",
+    period: "2019 — 2026",
     description:
-      "developed websites from scratch to fully functional WordPress solutions, handling all phases from design integration to deployment, including newsletters and email signatures",
-    technologies: ["WordPress", "HTML5", "CSS3", "JavaScript", "GSAP"],
+      "Built custom WordPress websites from design handoff to launch, along with supporting materials such as newsletters and email signatures.",
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP", "Figma", "Adobe XD",],
   },
   {
-    role: "Front-end Web Developer Intern",
+    role: "Front-End Developer Intern",
     company: "ITGSM",
     period: "02/14/2019 — 03/15/2019",
     description:
-      "Creating a responsive static website with a focus on clean design, user experience, and optimized performance.",
+      "Created a responsive static website with a focus on usability, clear content, and fast performance.",
     technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
   },
   {
@@ -34,7 +34,7 @@ export const experience = [
     company: "Goramedia",
     period: "02/01/2018 — 03/01/2018",
     description:
-      "Completed a one-month internship focused on graphic design, including business card creation and preparation of brochures and flyers.",
+      "Designed business cards, brochures, and flyers during a one-month internship.",
     technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe XD"],
   },
 ]
@@ -43,20 +43,20 @@ export const education = [
   {
     degree: "Full-Stack Web Developer Training",
     school: "3w Academy Maroc",
-    period: "2018—2019",
-    description: "Comprehensive training in full-stack web development.",
+    period: "2018 — 2019",
+    description: "Completed a full-stack web development program covering both front-end and back-end development.",
   },
   {
     degree: "Diploma in Multimedia Development",
     school: "Institut Spécialisé des Arts Graphiques",
     period: "2016—2018",
-    description: "Specialized diploma focusing on multimedia development.",
+    description: "Completed a diploma program in multimedia development.",
   },
   {
     degree: "Baccalauréat in Life and Earth Sciences",
     school: "Lycée Al Baroudi",
     period: "2015—2016",
-    description: "High school diploma with focus on Life and Earth Sciences.",
+    description: "Completed secondary education with a focus on Life and Earth Sciences.",
   },
 ]
 
@@ -65,7 +65,7 @@ export const projects = [
   {
     id: 1,
     title: "Robine Experts Immobiliers",
-    description: "Real estate expertise website with modern design",
+    description: "Website presenting a real estate expert’s services and areas of expertise.",
     image: "",
     category: "Real Estate",
     year: "2025",
@@ -78,7 +78,7 @@ export const projects = [
   {
     id: 2,
     title: "Alkeom M&A LAW",
-    description: "Corporate law firm website with professional design",
+    description: "Website introducing a corporate law firm and its legal services.",
     image: "",
     category: "Legal Services",
     year: "2025",
@@ -91,7 +91,7 @@ export const projects = [
   {
     id: 3,
     title: "Jensen & Schweblin",
-    description: "Law firm website with elegant and modern interface",
+    description: "Website presenting a law firm and its legal practice.",
     image: "",
     category: "Legal Services",
     year: "2025",
@@ -104,7 +104,7 @@ export const projects = [
   {
     id: 4,
     title: "BCCL Avocats",
-    description: "Business law firm with sophisticated web presence",
+    description: "Website presenting a business law firm and its legal services.",
     image: "",
     category: "Legal Services",
     year: "2025",
@@ -117,7 +117,7 @@ export const projects = [
   {
     id: 5,
     title: "Kalder",
-    description: "International law firm website",
+    description: "Website introducing an international law firm and its legal practice.",
     image: "",
     category: "Legal Services",
     year: "2025",
@@ -130,7 +130,7 @@ export const projects = [
   {
     id: 6,
     title: "Filali Kadiri & Associés",
-    description: "Law firm website with premium design",
+    description: "Website presenting a law firm and its legal services.",
     image: "",
     category: "Legal Services",
     year: "2025",
@@ -140,38 +140,12 @@ export const projects = [
     live: "",
     github: "",
   },
-  {
-    id: 46,
-    title: "Nidal Deco",
-    description: "Home renovation and interior design website",
-    image: "",
-    category: "Interior Design",
-    year: "2025",
-    type: "sideprojects",
-    technologies: ["Next.js", "Tailwind CSS", "ShadCN UI"],
-    featured: true,
-    github: "https://github.com/labrahimiimrane/NIDALDECO",
-    live: "https://nidaldeco.vercel.app/",
-  },
-  {
-    id: 47,
-    title: "Hora Tek",
-    description: "Technology solutions website",
-    image: "",
-    category: "Technology",
-    year: "2025",
-    type: "sideprojects",
-    technologies: ["Next.js", "Tailwind CSS", "ShadCN UI"],
-    featured: true,
-    github: "https://github.com/labrahimiimrane/horatek",
-    live: "https://horatek.vercel.app/",
-  },
 
   // 2024 Projects
   {
     id: 7,
     title: "Inlo Avocats",
-    description: "Legal services website with modern interface",
+    description: "Website introducing a legal practice and its services.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -184,7 +158,7 @@ export const projects = [
   {
     id: 8,
     title: "137 Notaires",
-    description: "Notary office website with professional design",
+    description: "Website presenting a notary office and its services.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -197,7 +171,7 @@ export const projects = [
   {
     id: 9,
     title: "Garbarini",
-    description: "International law firm website",
+    description: "Website introducing an international law firm and its legal practice.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -210,7 +184,7 @@ export const projects = [
   {
     id: 10,
     title: "ACD Avocats",
-    description: "Corporate law firm website",
+    description: "Website introducing a corporate law practice and its services.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -223,7 +197,7 @@ export const projects = [
   {
     id: 11,
     title: "Jarod Legal",
-    description: "Modern legal services platform",
+    description: "Website presenting legal services and practice information.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -236,7 +210,7 @@ export const projects = [
   {
     id: 12,
     title: "Change Cabinet d'Avocats",
-    description: "Law firm specializing in business transformation",
+    description: "Website introducing a law firm focused on business transformation.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -249,7 +223,7 @@ export const projects = [
   {
     id: 13,
     title: "Grandjean Avocats",
-    description: "Established law firm with premium web presence",
+    description: "Website presenting an established law firm and its services.",
     image: "",
     category: "Legal Services",
     year: "2024",
@@ -264,7 +238,7 @@ export const projects = [
   {
     id: 14,
     title: "OAK Clinic",
-    description: "Medical clinic website with modern design",
+    description: "Website presenting a medical clinic and its services.",
     image: "",
     category: "Healthcare",
     year: "2023",
@@ -277,7 +251,7 @@ export const projects = [
   {
     id: 15,
     title: "Le Prado Gilbert",
-    description: "Medical practice website",
+    description: "Website introducing a medical practice and its services.",
     image: "",
     category: "Healthcare",
     year: "2023",
@@ -290,7 +264,7 @@ export const projects = [
   {
     id: 16,
     title: "Abeille Avocats",
-    description: "Law firm with elegant web design",
+    description: "Website presenting a law firm and its legal practice.",
     image: "",
     category: "Legal Services",
     year: "2023",
@@ -303,7 +277,7 @@ export const projects = [
   {
     id: 17,
     title: "EHA Consulting",
-    description: "Business consulting firm website",
+    description: "Website introducing a business consulting firm and its services.",
     image: "",
     category: "Consulting",
     year: "2023",
@@ -316,7 +290,7 @@ export const projects = [
   {
     id: 18,
     title: "Paris Place De Droit",
-    description: "Legal education and networking platform",
+    description: "Platform for legal education and professional networking.",
     image: "",
     category: "Legal Services",
     year: "2023",
@@ -329,7 +303,7 @@ export const projects = [
   {
     id: 19,
     title: "OMID",
-    description: "International legal services",
+    description: "Website presenting international legal services.",
     image: "",
     category: "Legal Services",
     year: "2023",
@@ -342,7 +316,7 @@ export const projects = [
   {
     id: 20,
     title: "Bartholdi (Gide x Regimbeau)",
-    description: "Patent litigation law firm",
+    description: "Website introducing a law firm focused on patent litigation.",
     image: "",
     category: "Legal Services",
     year: "2023",
@@ -355,7 +329,7 @@ export const projects = [
   {
     id: 21,
     title: "Arion Venture Capital",
-    description: "Venture capital investment firm",
+    description: "Website presenting a venture capital and investment firm.",
     image: "",
     category: "Finance",
     year: "2023",
@@ -368,7 +342,7 @@ export const projects = [
   {
     id: 22,
     title: "Facture Électronique France",
-    description: "Electronic invoicing platform",
+    description: "Platform presenting electronic invoicing services.",
     image: "",
     category: "Technology",
     year: "2023",
@@ -381,7 +355,7 @@ export const projects = [
   {
     id: 23,
     title: "Avanty Avocats",
-    description: "Modern law firm website",
+    description: "Website introducing a law firm and its legal services.",
     image: "",
     category: "Legal Services",
     year: "2023",
@@ -396,7 +370,7 @@ export const projects = [
   {
     id: 24,
     title: "Mr Capital",
-    description: "Investment and wealth management",
+    description: "Website presenting investment and wealth management services.",
     image: "",
     category: "Finance",
     year: "2022",
@@ -409,7 +383,7 @@ export const projects = [
   {
     id: 25,
     title: "Cabanes Avocats",
-    description: "Legal services firm",
+    description: "Website introducing a legal services firm.",
     image: "",
     category: "Legal Services",
     year: "2022",
@@ -422,7 +396,7 @@ export const projects = [
   {
     id: 26,
     title: "Rivière Avocats",
-    description: "Law firm with professional web presence",
+    description: "Website presenting a law firm and its areas of practice.",
     image: "",
     category: "Legal Services",
     year: "2022",
@@ -435,7 +409,7 @@ export const projects = [
   {
     id: 27,
     title: "Regimbeau Creative IP",
-    description: "Intellectual property law firm",
+    description: "Website introducing an intellectual property law practice.",
     image: "",
     category: "Legal Services",
     year: "2022",
@@ -448,7 +422,7 @@ export const projects = [
   {
     id: 28,
     title: "Newera Avocats",
-    description: "Modern law firm website",
+    description: "Website introducing a law firm and its legal services.",
     image: "",
     category: "Legal Services",
     year: "2022",
@@ -463,7 +437,7 @@ export const projects = [
   {
     id: 29,
     title: "CNAJMJ",
-    description: "National organization website",
+    description: "Website presenting a national professional organization and its work.",
     image: "",
     category: "Organization",
     year: "2021",
@@ -476,7 +450,7 @@ export const projects = [
   {
     id: 30,
     title: "PRODUCT LAW FIRM",
-    description: "Product liability law firm",
+    description: "Website introducing a law firm focused on product liability.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -489,7 +463,7 @@ export const projects = [
   {
     id: 31,
     title: "Cornillier Avocats",
-    description: "Legal services firm",
+    description: "Website introducing a legal services firm.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -502,7 +476,7 @@ export const projects = [
   {
     id: 32,
     title: "Loucif & Co",
-    description: "Law firm with modern web design",
+    description: "Website introducing a law firm and its areas of practice.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -515,7 +489,7 @@ export const projects = [
   {
     id: 33,
     title: "Peyrical Sabatier Avocats",
-    description: "Legal services website",
+    description: "Website introducing a legal practice and its services.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -528,7 +502,7 @@ export const projects = [
   {
     id: 34,
     title: "Urban Act Avocats",
-    description: "Urban planning law specialists",
+    description: "Website introducing legal specialists in urban planning.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -541,7 +515,7 @@ export const projects = [
   {
     id: 35,
     title: "Sébastien Beart",
-    description: "Personal law practice website",
+    description: "Website presenting an independent legal practice.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -554,7 +528,7 @@ export const projects = [
   {
     id: 36,
     title: "NOOA Avocats",
-    description: "Modern law firm",
+    description: "Website introducing a law firm and its legal practice.",
     image: "",
     category: "Legal Services",
     year: "2021",
@@ -567,7 +541,7 @@ export const projects = [
   {
     id: 37,
     title: "Avenir Formation",
-    description: "Professional training and education platform",
+    description: "Platform presenting professional training and educational programs.",
     image: "",
     category: "Education",
     year: "2021",
@@ -582,7 +556,7 @@ export const projects = [
   {
     id: 38,
     title: "FTPA Avocats",
-    description: "Tax and business law firm",
+    description: "Website introducing a law firm focused on tax and business law.",
     image: "",
     category: "Legal Services",
     year: "2020",
@@ -595,7 +569,7 @@ export const projects = [
   {
     id: 39,
     title: "Chemouli Avocats",
-    description: "Legal services firm",
+    description: "Website introducing a legal services firm.",
     image: "",
     category: "Legal Services",
     year: "2020",
@@ -608,7 +582,7 @@ export const projects = [
   {
     id: 40,
     title: "Comolet Zanati Avocats",
-    description: "Law firm website",
+    description: "Website presenting a law firm and its legal services.",
     image: "",
     category: "Legal Services",
     year: "2020",
@@ -621,7 +595,7 @@ export const projects = [
   {
     id: 41,
     title: "Fidexia Business Services",
-    description: "Business services firm",
+    description: "Website presenting a business services firm and its offerings.",
     image: "",
     category: "Business Services",
     year: "2020",
@@ -634,7 +608,7 @@ export const projects = [
   {
     id: 42,
     title: "Arias Notaires",
-    description: "Notary office website",
+    description: "Website introducing a notary office and its services.",
     image: "",
     category: "Legal Services",
     year: "2020",
@@ -647,7 +621,7 @@ export const projects = [
   {
     id: 43,
     title: "Blatter Seynaeve Avocats",
-    description: "Legal services website",
+    description: "Website introducing a legal practice and its services.",
     image: "",
     category: "Legal Services",
     year: "2020",
@@ -660,7 +634,7 @@ export const projects = [
   {
     id: 44,
     title: "Noval Avocats",
-    description: "Law firm with professional design",
+    description: "Website presenting a law firm and its areas of practice.",
     image: "",
     category: "Legal Services",
     year: "2020",
@@ -672,10 +646,11 @@ export const projects = [
   },
 
   // 2019 Projects
+  /*
   {
     id: 45,
     title: "RNIB",
-    description: "Business intelligence firm",
+    description: "Website presenting a business intelligence firm and its services.",
     image: "",
     category: "Consulting",
     year: "2019",
@@ -684,12 +659,13 @@ export const projects = [
     featured: false,
     live: "https://www.rnib.fr/",
     github: "",
-  },
+  }
+  */
 ]
 
 export const skills = {
-  frontend: ["React", "Next.js", "Tailwind CSS"],
-  backend: ["Node.js", "Express"],
+  frontend: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS", "GSAP"],
+  backend: ["PHP", "Node.js", "Express"],
   database: ["MongoDB", "PostgreSQL", "MySQL"],
   cms: ["WordPress"],
 }
@@ -705,6 +681,4 @@ export const contactInfo = {
   phone: "+212 609-936524",
   location: "Casablanca, Morocco",
   timezone: "GMT+1 (Africa/Casablanca)",
-  availability: "Available for freelance work",
-  responseTime: "I typically respond within 24 hours",
 }

@@ -84,7 +84,7 @@ export default function Home() {
                   href="/contact"
                   className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
                 >
-                  <span>Get in touch</span>
+                  <span>Let’s work together</span>
                   <ArrowRight size={16} />
                 </Link>
               </div>
@@ -114,12 +114,12 @@ export default function Home() {
         {/* Featured Work */}
         <div className="mb-20">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="text-2xl font-light text-white">Selected Work</h2>
+            <h2 className="text-2xl font-light text-white">Featured Projects</h2>
             <Link
               href="/projects"
               className="flex items-center space-x-2 text-sm text-muted hover:opacity-80 transition-opacity group"
             >
-              <span>View all</span>
+              <span>Explore all projects</span>
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

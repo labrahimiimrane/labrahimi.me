@@ -13,7 +13,7 @@ export default function Contact() {
             Contact
           </h1>
           <p className="text-lg text-muted leading-relaxed">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+            Have a project in mind? I’d be happy to hear about it.
           </p>
         </div>
 
@@ -68,11 +68,6 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-8 p-4 minimal-card">
-              <p className="text-xs text-subtle mb-3">{contactInfo.responseTime}</p>
-              <p className="text-xs text-muted">{contactInfo.availability}</p>
             </div>
 
             {/* Social Links */}

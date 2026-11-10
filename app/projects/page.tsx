@@ -10,8 +10,7 @@ export default function Projects() {
           Projects
         </h1>
         <p className="text-lg text-muted leading-relaxed max-w-2xl mx-auto">
-          A showcase of my work agency projects, freelance collaborations, and personal side projects. Each project
-          represents a unique challenge and creative solution.
+          Explore a selection of websites I’ve built across agency and personal projects, using WordPress and modern web technologies.
         </p>
       </div>
 

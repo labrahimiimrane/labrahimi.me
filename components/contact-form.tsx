@@ -82,7 +82,7 @@ export function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm text-muted mb-2">
-            Full Name
+            Your name
           </label>
           <input
             id="name"
@@ -99,7 +99,7 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="email" className="block text-sm text-muted mb-2">
-            Email
+            Your email address
           </label>
           <input
             id="email"
@@ -116,7 +116,7 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="message" className="block text-sm text-muted mb-2">
-            Message
+            How can I help?
           </label>
           <textarea
             id="message"
@@ -127,7 +127,7 @@ export function ContactForm() {
             disabled={isSubmitting}
             rows={6}
             className="w-full px-4 py-3 rounded-lg resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-            placeholder="Tell me about your project..."
+            placeholder="Tell me a little about your project..."
           />
         </div>
 
@@ -144,7 +144,7 @@ export function ContactForm() {
           ) : (
             <>
               <Send size={16} />
-              <span>Send Message</span>
+              <span>Send message</span>
             </>
           )}
         </button>
