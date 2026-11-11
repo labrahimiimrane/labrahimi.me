@@ -9,7 +9,7 @@ export const personalInfo = {
 
   aboutBio: [
     "With more than 6 years of experience, I work across front-end and back-end development to turn designs into functional websites.",
-    "I build custom WordPress themes and functionality with PHP, and develop web applications with React and Next.js. My toolkit also includes JavaScript, Tailwind CSS, and GSAP.",
+    "I build custom WordPress themes and functionality with PHP, and develop websites with React and Next.js. My toolkit also includes JavaScript, Tailwind CSS, and GSAP.",
   ],
   avatar: "/avatar.jpeg",
 }
