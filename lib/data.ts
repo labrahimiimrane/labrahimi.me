@@ -51,13 +51,13 @@ export const education = [
   {
     degree: "Diploma in Multimedia Development",
     school: "Institut Spécialisé des Arts Graphiques",
-    period: "2016—2018",
+    period: "2016 — 2018",
     description: "Completed a diploma program in multimedia development.",
   },
   {
     degree: "Baccalauréat in Life and Earth Sciences",
     school: "Lycée Al Baroudi",
-    period: "2015—2016",
+    period: "2015 — 2016",
     description: "Completed secondary education with a focus on Life and Earth Sciences.",
   },
 ]
