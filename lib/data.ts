@@ -146,7 +146,7 @@ export const projects: Project[] = [
     id: 47,
     title: "Hora Tek",
     description: "Website showcasing HORA TEK’s security and workforce-management solutions, including time tracking, access control, anti-theft systems, and home automation.",
-    image: "",
+    image: "/projects/horatek.png",
     category: "Technology",
     year: "2025",
     type: "vibecoding",

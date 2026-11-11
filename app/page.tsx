@@ -137,7 +137,7 @@ export default function Home() {
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
 
-                    <div className="absolute top-3 left-3">
+                    <div className="absolute bottom-3 right-3">
                       <span
                         className={`px-3 py-1.5 text-xs rounded-lg font-semibold shadow-lg ${getProjectTypeStyle(project.type)}`}
                       >
