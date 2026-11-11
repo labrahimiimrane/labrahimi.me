@@ -90,7 +90,7 @@ export default function About() {
                   </div>
 
                   <div className="space-y-4 text-muted leading-relaxed">
-                    {personalInfo.bio.map((paragraph, index) => (
+                    {personalInfo.aboutBio.map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>

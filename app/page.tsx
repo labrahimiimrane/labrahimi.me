@@ -49,7 +49,7 @@ export default function Home() {
               </div>
 
               <div className="max-w-2xl mb-8">
-                <p className="text-lg text-muted leading-relaxed mb-8">{personalInfo.bio[0]}</p>
+                <p className="text-lg text-muted leading-relaxed mb-8">{personalInfo.homeIntro}</p>
 
                 <div className="flex flex-col md:flex-row items-start md:items-center space-y-1 md:space-y-0 md:space-x-6 text-sm text-subtle mb-8">
                   <span>{personalInfo.location}</span>
