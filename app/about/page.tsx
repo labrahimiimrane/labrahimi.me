@@ -118,7 +118,7 @@ export default function About() {
                   </div>
 
                   {/* Social Links */}
-                  <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                  <div className="flex items-center flex-wrap gap-4 justify-between pt-6 border-t border-white/10">
                     <div className="flex items-center space-x-4">
                       {socialLinks.github && (
                         <a

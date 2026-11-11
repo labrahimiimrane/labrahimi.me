@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Labrahimi Imrane",
-  title: "Full Stack Web Developer",
+  title: "Full-Stack Web Developer",
   location: "Casablanca, Morocco",
   status: "Available for work and freelance projects",
   email: "labrahimiimrane@gmail.com",
@@ -682,7 +682,7 @@ export const skills = {
   frontend: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS", "GSAP"],
   backend: ["PHP", "Node.js", "Express"],
   database: ["MongoDB", "PostgreSQL", "MySQL"],
-  cms: ["WordPress"],
+  cms: ["WordPress", "Strapi.js"],
 }
 
 export const socialLinks = {

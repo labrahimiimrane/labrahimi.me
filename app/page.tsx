@@ -2,8 +2,9 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
+import { ArrowRight, Mail, Phone, MapPin, ExternalLink, Github } from "lucide-react"
 import { personalInfo, contactInfo, projects } from "@/lib/data"
+
 
 export default function Home() {
   // Get featured projects and sort by year
@@ -142,6 +143,29 @@ export default function Home() {
                       >
                         {getProjectTypeLabel(project.type)}
                       </span>
+                    </div>
+
+                    <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
+                        >
+                          <ExternalLink size={14} className="text-white" />
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
+                        >
+                          <Github size={14} className="text-white" />
+                        </a>
+                      )}
                     </div>
                   </div>
 
