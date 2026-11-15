@@ -21,7 +21,7 @@ const skillLabels = {
   frontend: "Frontend Development",
   backend: "Backend Development",
   database: "Databases",
-  cms: "Content Management",
+  cms: "CMS & Headless CMS",
 };
 
 export default function About() {

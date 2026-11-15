@@ -63,7 +63,96 @@ export const education = [
 ]
 
 export const projects: Project[] = [
+  // 2026 Projects
+
+  {
+    id: 51,
+    title: "Humbert | Stasse",
+    description:
+      "Website for Humbert | Stasse, a Paris law firm advising companies and executives on business criminal law, compliance, internal investigations, and cross-border matters.",
+    image: "/projects/hs.png",
+    category: "Legal Services",
+    year: "2026",
+    type: "agency",
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
+    featured: false,
+    live: "https://www.humbert-stasse.com/",
+    github: "",
+  },
+
+  {
+    id: 50,
+    title: "Harpers Legal",
+    description:
+      "Website for Harpers Legal, an independent Monaco-based legal advisory firm serving international entrepreneurs, individuals, and families across wealth structuring, business law, real estate, and relocation.",
+    image: "/projects/harpers.png",
+    category: "Legal Services",
+    year: "2026",
+    type: "agency",
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
+    featured: false,
+    live: "https://harpers-legal.mc/",
+    github: "",
+  },
+  {
+    id: 49,
+    title: "IMT Partners",
+    description:
+      "Corporate website for IMT Partners, a management transition firm connecting organizations with experienced managers to lead strategic transformations.",
+    image: "/projects/imt.png",
+    category: "Consulting",
+    year: "2026",
+    type: "agency",
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
+    featured: false,
+    live: "https://www.imt-partners.com/",
+    github: "",
+  },
+
+  {
+    id: 48,
+    title: "Resumely",
+    description:
+      "A browser-based CV builder for creating and previewing resumes, with editable sections, ATS analysis, and PDF export.",
+    image: "",
+    category: "Career Tools",
+    year: "2026",
+    type: "sideprojects",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    featured: true,
+    live: "https://resumely-career.vercel.app/",
+    github: "https://github.com/labrahimiimrane/Resumely",
+  },
+
   // 2025 Projects
+      {
+      id: 53,
+      title: "Bossard Groupe",
+      description:
+        "Website for Bossard Groupe, an accounting and business advisory firm offering HR and payroll services, auditing, financial expertise, and strategic consulting.",
+      image: "/projects/bossard-groupe.png",
+      category: "Business Services",
+      year: "2025",
+      type: "agency",
+      technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
+      featured: false,
+      live: "https://www.bossard-groupe.com/",
+      github: "",
+    },
+    {
+    id: 52,
+    title: "ESG Lab & Society",
+    description:
+      "Website for ESG Lab & Society, a community of business leaders and experts helping organizations integrate ESG priorities into their strategies and sustainable transformation.",
+    image: "/projects/esglab.png",
+    category: "Sustainability",
+    year: "2025",
+    type: "agency",
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
+    featured: false,
+    live: "https://esglabsociety.com/",
+    github: "",
+  },
   {
     id: 1,
     title: "Robine Experts Immobiliers",
