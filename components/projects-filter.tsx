@@ -3,9 +3,10 @@
 import { useState } from "react"
 import Image from "next/image"
 import type { Project, ProjectType } from "@/lib/data"
+import { PROJECT_TYPE_LABELS, PROJECT_TYPE_STYLES } from "@/lib/project-types"
 import { ExternalLink, Github, Briefcase, User, Filter, Code, Sparkles } from "lucide-react"
 
-type FilterType = "all" | "agency" | "freelance" | "sideprojects" | "vibecoding"
+type FilterType = "all" | ProjectType
 
 interface ProjectsFilterProps {
   projects: Project[]
@@ -43,20 +44,6 @@ const FILTERS: {
   },
 ]
 
-const TYPE_STYLES: Record<ProjectType, string> = {
-  agency: "bg-blue-600 text-white border border-blue-500",
-  freelance: "bg-green-600 text-white border border-green-500",
-  sideprojects: "bg-purple-600 text-white border border-purple-500",
-  vibecoding: "bg-rose-600 text-white border border-rose-500",
-}
-
-const TYPE_LABELS: Record<ProjectType, string> = {
-  agency: "Agency",
-  freelance: "Freelance",
-  sideprojects: "Side Project",
-  vibecoding: "Vibe Coding",
-}
-
 function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="minimal-card overflow-hidden group">
@@ -71,10 +58,10 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="absolute bottom-3 right-3">
           <span
             className={`px-3 py-1.5 text-xs rounded-lg font-semibold shadow-lg ${
-              TYPE_STYLES[project.type]
+              PROJECT_TYPE_STYLES[project.type]
             }`}
           >
-            {TYPE_LABELS[project.type]}
+            {PROJECT_TYPE_LABELS[project.type]}
           </span>
         </div>
 
@@ -141,7 +128,7 @@ export function ProjectsFilter({ projects }: ProjectsFilterProps) {
     (project) => activeFilter === "all" || project.type === activeFilter,
   )
 
-  const projectCounts = projects.reduce(
+  const projectCounts = projects.reduce<Record<ProjectType, number>>(
     (counts, project) => {
       counts[project.type] += 1
       return counts

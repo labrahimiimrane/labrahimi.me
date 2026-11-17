@@ -1,6 +1,6 @@
-import { Mail, MapPin, Phone, Clock, Github, Linkedin } from "lucide-react"
-import { contactInfo, socialLinks } from "@/lib/data"
-import { XIcon } from "@/components/icons/x-icon"
+import { Mail, MapPin, Phone, Clock } from "lucide-react"
+import { contactInfo } from "@/lib/data"
+import { SocialLinks } from "@/components/social-links"
 import { ContactForm } from "@/components/contact-form"
 
 export default function Contact() {
@@ -74,39 +74,7 @@ export default function Contact() {
             <div className="mt-6">
               <p className="text-sm text-subtle mb-3">Where to find me</p>
               <div className="flex space-x-4">
-                {socialLinks.github && (
-                        <a
-                          href={socialLinks.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
-                          title="GitHub"
-                        >
-                          <Github size={16} />
-                        </a>
-                      )}
-                      {socialLinks.linkedin && (
-                        <a
-                          href={socialLinks.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
-                          title="LinkedIn"
-                        >
-                          <Linkedin size={16} />
-                        </a>
-                      )}
-                      {socialLinks.x && (
-                        <a
-                          href={socialLinks.x}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
-                          title="X"
-                        >
-                          <XIcon size={16} />
-                        </a>
-                      )}
+                <SocialLinks />
               </div>
             </div>
           </div>

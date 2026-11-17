@@ -1,10 +1,8 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Mail, Phone, MapPin, ExternalLink, Github } from "lucide-react"
 import { personalInfo, contactInfo, projects } from "@/lib/data"
-
+import { PROJECT_TYPE_LABELS, PROJECT_TYPE_STYLES } from "@/lib/project-types"
 
 export default function Home() {
   // Get featured projects and sort by year
@@ -15,26 +13,6 @@ export default function Home() {
       const yearB = Number.parseInt(b.year, 10) || 0
       return yearB - yearA
     })
-
-  const getProjectTypeStyle = (type: string) => {
-    const styles: Record<string, string> = {
-      agency: "bg-blue-600 text-white border border-blue-500",
-      freelance: "bg-green-600 text-white border border-green-500",
-      sideprojects: "bg-purple-600 text-white border border-purple-500",
-      vibecoding: "bg-rose-600 text-white border border-rose-500",
-    }
-    return styles[type] || "bg-white/10 text-white border border-white/20"
-  }
-
-  const getProjectTypeLabel = (type: string) => {
-    const labels: Record<string, string> = {
-      agency: "Agency",
-      freelance: "Freelance",
-      sideprojects: "Side Project",
-      vibecoding: "Vibe Coding",
-    }
-    return labels[type] || type
-  }
 
   return (
     <div className="min-h-screen dot-grid">
@@ -139,9 +117,9 @@ export default function Home() {
 
                     <div className="absolute bottom-3 right-3">
                       <span
-                        className={`px-3 py-1.5 text-xs rounded-lg font-semibold shadow-lg ${getProjectTypeStyle(project.type)}`}
+                        className={`px-3 py-1.5 text-xs rounded-lg font-semibold shadow-lg ${PROJECT_TYPE_STYLES[project.type]}`}
                       >
-                        {getProjectTypeLabel(project.type)}
+                        {PROJECT_TYPE_LABELS[project.type]}
                       </span>
                     </div>
 
@@ -181,7 +159,7 @@ export default function Home() {
                     <p className="text-sm text-muted mb-4 leading-relaxed">{project.description}</p>
 
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech: string) => (
+                      {project.technologies.map((tech) => (
                         <span
                           key={tech}
                           className="px-2 py-1 rounded-lg text-xs bg-white/5 border border-white/10 text-subtle"

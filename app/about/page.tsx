@@ -3,8 +3,6 @@ import Link from "next/link"
 import {
   Mail,
   Phone,
-  Github,
-  Linkedin,
   MapPin,
   ArrowRight,
   Briefcase,
@@ -14,15 +12,15 @@ import {
   Code,
   User,
 } from "lucide-react"
-import { XIcon } from "@/components/icons/x-icon"
-import { personalInfo, experience, education, skills, contactInfo, socialLinks } from "@/lib/data"
+import { SocialLinks } from "@/components/social-links"
+import { personalInfo, experience, education, skills, contactInfo } from "@/lib/data"
 
-const skillLabels = {
+const skillLabels: Record<keyof typeof skills, string> = {
   frontend: "Frontend Development",
   backend: "Backend Development",
   database: "Databases",
   cms: "CMS & Headless CMS",
-};
+}
 
 export default function About() {
   return (
@@ -120,49 +118,17 @@ export default function About() {
                   {/* Social Links */}
                   <div className="flex items-center flex-wrap gap-4 justify-between pt-6 border-t border-white/10">
                     <div className="flex items-center space-x-4">
-                      {socialLinks.github && (
-                        <a
-                          href={socialLinks.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
-                          title="GitHub"
-                        >
-                          <Github size={16} />
-                        </a>
-                      )}
-                      {socialLinks.linkedin && (
-                        <a
-                          href={socialLinks.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
-                          title="LinkedIn"
-                        >
-                          <Linkedin size={16} />
-                        </a>
-                      )}
-                      {socialLinks.x && (
-                        <a
-                          href={socialLinks.x}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-white/10 transition-all duration-300"
-                          title="X"
-                        >
-                          <XIcon size={16} />
-                        </a>
-                      )}
+                      <SocialLinks />
                     </div>
 
-                    <Link
-                      href="/contact"
+                    <a
+                      href={personalInfo.resume}
                       className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
                       download
                     >
                       <span>Download Resume</span>
                       <Download size={16} />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -219,8 +185,8 @@ export default function About() {
           </div>
 
           <div className="space-y-8">
-            {experience.map((exp, index) => (
-              <div key={index} className="minimal-card p-8 hover:scale-[1.01] transition-all duration-300 group">
+            {experience.map((exp) => (
+              <div key={`${exp.company}-${exp.period}`} className="minimal-card p-8 hover:scale-[1.01] transition-all duration-300 group">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-start space-x-4 mb-4">
@@ -269,8 +235,8 @@ export default function About() {
           </div>
 
           <div className="space-y-6">
-            {education.map((edu, index) => (
-              <div key={index} className="minimal-card p-8 hover:scale-[1.01] transition-all duration-300 group">
+            {education.map((edu) => (
+              <div key={`${edu.school}-${edu.period}`} className="minimal-card p-8 hover:scale-[1.01] transition-all duration-300 group">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-start space-x-4 mb-4">
@@ -300,7 +266,7 @@ export default function About() {
         <div className="text-center">
           <div className="minimal-card p-12">
             <h2 className="text-2xl font-light mb-4" style={{ color: "var(--text-primary)" }}>
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-muted mb-8 max-w-2xl mx-auto">
               Have a website or digital project in mind? Let’s talk about how I can help bring it to life.

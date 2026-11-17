@@ -9,6 +9,7 @@ export function ContactForm() {
     name: "",
     email: "",
     message: "",
+    website: "", // honeypot, hidden from visitors
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
@@ -40,14 +41,14 @@ export function ContactForm() {
           type: "success",
           message: "Message sent successfully! I'll get back to you soon.",
         })
-        setFormData({ name: "", email: "", message: "" })
+        setFormData({ name: "", email: "", message: "", website: "" })
       } else {
         setSubmitStatus({
           type: "error",
           message: data.error || "Failed to send message. Please try again.",
         })
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "Failed to send message. Please try again.",
@@ -80,6 +81,20 @@ export function ContactForm() {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Honeypot: off-screen and skipped by keyboard/screen readers; only bots fill it in */}
+        <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={formData.website}
+            onChange={handleChange}
+          />
+        </div>
+
         <div>
           <label htmlFor="name" className="block text-sm text-muted mb-2">
             Your name

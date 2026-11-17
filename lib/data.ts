@@ -3,8 +3,6 @@ export const personalInfo = {
   title: "Full-Stack Web Developer",
   location: "Casablanca, Morocco",
   status: "Available for work and freelance projects",
-  email: "labrahimiimrane@gmail.com",
-  phone: "+212 609-936524",
   homeIntro: "I build responsive websites that bring design concepts to life, using WordPress and modern web technologies to create clear, engaging user experiences.",
 
   aboutBio: [
@@ -12,16 +10,17 @@ export const personalInfo = {
     "I build custom WordPress themes and functionality with PHP, and develop websites with React and Next.js. My toolkit also includes JavaScript, Tailwind CSS, and GSAP.",
   ],
   avatar: "/avatar.jpeg",
+  resume: "/imrane-labrahimi-cv.pdf",
 }
 
-export const experience = [
+export const experience: Experience[] = [
   {
     role: "Full-Stack Web Developer",
     company: "Eliott & Markus.",
     period: "2019 — 2026",
     description:
       "Built custom WordPress websites from design handoff to launch, along with supporting materials such as newsletters and email signatures.",
-    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP", "Figma", "Adobe XD",],
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP", "Figma", "Adobe XD"],
   },
   {
     role: "Front-End Developer Intern",
@@ -41,7 +40,7 @@ export const experience = [
   },
 ]
 
-export const education = [
+export const education: Education[] = [
   {
     degree: "Full-Stack Web Developer Training",
     school: "3w Academy Maroc",
@@ -125,21 +124,21 @@ export const projects: Project[] = [
   },
 
   // 2025 Projects
-      {
-      id: 53,
-      title: "Bossard Groupe",
-      description:
-        "Website for Bossard Groupe, an accounting and business advisory firm offering HR and payroll services, auditing, financial expertise, and strategic consulting.",
-      image: "/projects/bossard-groupe.png",
-      category: "Business Services",
-      year: "2025",
-      type: "agency",
-      technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
-      featured: false,
-      live: "https://www.bossard-groupe.com/",
-      github: "",
-    },
-    {
+  {
+    id: 53,
+    title: "Bossard Groupe",
+    description:
+      "Website for Bossard Groupe, an accounting and business advisory firm offering HR and payroll services, auditing, financial expertise, and strategic consulting.",
+    image: "/projects/bossard-groupe.png",
+    category: "Business Services",
+    year: "2025",
+    type: "agency",
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
+    featured: false,
+    live: "https://www.bossard-groupe.com/",
+    github: "",
+  },
+  {
     id: 52,
     title: "ESG Lab & Society",
     description:
@@ -356,7 +355,7 @@ export const projects: Project[] = [
     id: 15,
     title: "Le Prado Gilbert",
     description: "Website for Le Prado & Gilbert, a law firm representing clients before France’s highest courts and administrative courts, including the Conseil d’État and Cour de cassation.",
-    image: "/projects/le_Prado_gilbert.png",
+    image: "/projects/le_prado_gilbert.png",
     category: "Legal Services",
     year: "2023",
     type: "agency",
@@ -555,7 +554,7 @@ export const projects: Project[] = [
     id: 30,
     title: "PRODUCT LAW FIRM",
     description: "Website for Product Law Firm, a specialist legal practice advising businesses on product regulation and compliance throughout a product’s lifecycle, from development to recall.",
-    image: "projects/product-lawfirm.png",
+    image: "/projects/product-lawfirm.png",
     category: "Legal Services",
     year: "2021",
     type: "agency",
@@ -568,7 +567,7 @@ export const projects: Project[] = [
     id: 31,
     title: "Cornillier Avocats",
     description: "Website for Cornillier Avocats, a law firm advising responsible businesses and social-impact organizations on business and employment law.",
-    image: "projects/cornillier-avocats.png",
+    image: "/projects/cornillier-avocats.png",
     category: "Legal Services",
     year: "2021",
     type: "agency",
@@ -787,6 +786,20 @@ export const contactInfo = {
   timezone: "GMT (Africa/Casablanca)",
 }
 
+export interface Experience {
+  role: string
+  company: string
+  period: string
+  description: string
+  technologies: string[]
+}
+
+export interface Education {
+  degree: string
+  school: string
+  period: string
+  description: string
+}
 
 export type ProjectType =
   | "agency"
