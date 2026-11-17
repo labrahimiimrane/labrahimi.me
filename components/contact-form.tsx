@@ -138,7 +138,7 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="message" className="block text-sm text-muted mb-2">
-            How can I help?
+            Tell me about your project or role
           </label>
           <textarea
             id="message"
@@ -150,7 +150,7 @@ export function ContactForm() {
             disabled={isSubmitting}
             rows={6}
             className="w-full px-4 py-3 rounded-lg resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-            placeholder="Tell me a little about your project..."
+            placeholder="A few details about your project, timeline, or the role you’re hiring for..."
           />
         </div>
 

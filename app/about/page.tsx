@@ -20,31 +20,21 @@ import { pageMetadata } from "@/lib/site"
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "About Labrahimi Imrane, a full-stack web developer in Casablanca, Morocco, with 6+ years of experience in WordPress, PHP, React, and Next.js: skills, professional experience, and education.",
+    `About ${personalInfo.name}, full-stack web developer in Casablanca with ${personalInfo.yearsOfExperience} years of experience: custom WordPress development, modern web apps, skills, and education.`,
   path: "/about",
 })
-
-const skillLabels: Record<keyof typeof skills, string> = {
-  frontend: "Frontend Development",
-  backend: "Backend Development",
-  database: "Databases",
-  cms: "CMS & Headless CMS",
-}
 
 export default function About() {
   return (
     <div className="min-h-screen dot-grid">
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="max-w-6xl mx-auto px-6 pt-20 pb-32">
         {/* Hero Section */}
         <div className="mb-32">
           <div className="text-center mb-16">
-            <h1 className="text-3xl font-light mb-4" style={{ color: "var(--text-primary)" }}>
+            <h1 className="text-4xl md:text-5xl font-light tracking-tight mb-4" style={{ color: "var(--text-primary)" }}>
               About Me
             </h1>
-            <p className="max-w-2xl text-lg text-muted leading-relaxed m-auto">
-              Full-stack developer with 6+ years of experience building responsive
-              websites with WordPress, Next.js, and other modern technologies.
-            </p>
+            <p className="max-w-2xl text-lg text-muted leading-relaxed m-auto">{personalInfo.aboutIntro}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -86,13 +76,15 @@ export default function About() {
                     <h3 className="text-lg font-medium mb-2" style={{ color: "var(--text-primary)" }}>
                       {personalInfo.title}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-subtle mb-6">
-                      <div className="flex items-center space-x-2">
-                        <MapPin size={14} />
-                        <span>{personalInfo.location}</span>
-                      </div>
-                      <span className="hidden md:inline">•</span>
-                      <span className="text-green-400">{personalInfo.status}</span>
+                    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-subtle mb-6">
+                      <span className="inline-flex items-center gap-2">
+                        <MapPin size={14} aria-hidden="true" />
+                        {personalInfo.location} · {personalInfo.availability}
+                      </span>
+                      <span className="inline-flex items-center gap-2 text-green-400">
+                        <span className="w-2 h-2 rounded-full bg-green-400" aria-hidden="true" />
+                        {personalInfo.status}
+                      </span>
                     </div>
                   </div>
 
@@ -135,8 +127,8 @@ export default function About() {
                       className="inline-flex items-center whitespace-nowrap space-x-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
                       download
                     >
-                      <span>Download Resume</span>
-                      <Download size={16} />
+                      <span>Download CV</span>
+                      <Download size={16} aria-hidden="true" />
                     </a>
                   </div>
                 </div>
@@ -154,28 +146,31 @@ export default function About() {
                 Technical Skills
               </h2>
             </div>
-            <p className="text-muted max-w-2xl mx-auto">Tools and technologies I use to build responsive, engaging web experiences.</p>
+            <p className="text-muted max-w-2xl mx-auto">Technologies and tools I use to build custom websites and web applications.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(skills).map(([category, skillList]) => (
-              <div key={category} className="minimal-card p-6 hover:scale-[1.02] transition-all duration-300 group">
-                <h3
-                  className="text-lg font-medium mb-4 text-center"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {skillLabels[category as keyof typeof skillLabels] ?? category}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+            {skills.map((group, index) => (
+              <div
+                key={group.label}
+                className={`minimal-card p-6 hover:scale-[1.02] transition-all duration-300 ${
+                  // Fill both rows on large screens (3 + 2) and avoid an orphan card on small ones
+                  index < 3 ? "lg:col-span-2" : "lg:col-span-3"
+                } ${index === skills.length - 1 && skills.length % 2 === 1 ? "sm:col-span-2" : ""}`}
+              >
+                <h3 className="text-lg font-medium mb-4 text-center" style={{ color: "var(--text-primary)" }}>
+                  {group.label}
                 </h3>
-                <div className="space-y-3">
-                  {skillList.map((skill) => (
-                    <div
+                <ul className="flex flex-wrap justify-center gap-2">
+                  {group.items.map((skill) => (
+                    <li
                       key={skill}
-                      className="flex items-center justify-center px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg text-muted hover:bg-white/10 hover:border-white/20 hover:text-primary transition-all duration-300"
+                      className="px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg text-muted hover:bg-white/10 hover:border-white/20 hover:text-primary transition-all duration-300"
                     >
                       {skill}
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
@@ -190,7 +185,7 @@ export default function About() {
                 Professional Experience
               </h2>
             </div>
-            <p className="text-muted max-w-2xl mx-auto">An overview of my professional background.</p>
+            <p className="text-muted max-w-2xl mx-auto">My professional background, from internships to agency development.</p>
           </div>
 
           <div className="space-y-8">
@@ -213,7 +208,16 @@ export default function About() {
                         </div>
                       </div>
                     </div>
-                    <p className="text-muted leading-relaxed mb-6 ml-16">{exp.description}</p>
+                    <div className="mb-6 ml-16">
+                      <p className="text-muted leading-relaxed">{exp.description}</p>
+                      {exp.highlights && (
+                        <ul className="mt-4 space-y-2 text-muted leading-relaxed list-disc pl-5 marker:text-subtle">
+                          {exp.highlights.map((highlight) => (
+                            <li key={highlight}>{highlight}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 ml-16">
@@ -240,7 +244,7 @@ export default function About() {
                 Education
               </h2>
             </div>
-            <p className="text-muted max-w-2xl mx-auto">Academic background and continuous learning journey</p>
+            <p className="text-muted max-w-2xl mx-auto">Academic background and training.</p>
           </div>
 
           <div className="space-y-6">
@@ -278,22 +282,22 @@ export default function About() {
               Let&apos;s Work Together
             </h2>
             <p className="text-muted mb-8 max-w-2xl mx-auto">
-              Have a website or digital project in mind? Let’s talk about how I can help bring it to life.
+              Need a custom website, or a full-stack developer for your team? I&apos;m open to freelance projects and full-time roles.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
               >
-                <span>Get in touch</span>
-                <ArrowRight size={16} />
+                <span>Start a Project</span>
+                <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
                 href="/projects"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg font-medium hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <span>Explore my work</span>
-                <ArrowRight size={16} />
+                <span>View My Work</span>
+                <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
           </div>

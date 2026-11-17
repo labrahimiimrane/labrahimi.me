@@ -2,12 +2,20 @@ export const personalInfo = {
   name: "Labrahimi Imrane",
   title: "Full-Stack Web Developer",
   location: "Casablanca, Morocco",
-  status: "Available for work and freelance projects",
-  homeIntro: "I build responsive websites that bring design concepts to life, using WordPress and modern web technologies to create clear, engaging user experiences.",
-
+  status: "Available for freelance projects and full-time roles",
+  availability: "Remote or on-site",
+  yearsOfExperience: "7+",
+  homeIntro:
+    "I build custom websites and web applications, turning designs into fast, responsive, and functional digital experiences.",
+  homeSummary:
+    "I specialize in custom WordPress development, with themes built from scratch in PHP, and I build modern sites and apps with React, Next.js, and TypeScript.",
+  aboutIntro:
+    "Full-stack web developer with 7+ years of experience building custom websites and web applications.",
   aboutBio: [
-    "With more than 6 years of experience, I work across front-end and back-end development to turn designs into functional websites.",
-    "I build custom WordPress themes and functionality with PHP, and develop websites with React and Next.js. My toolkit also includes JavaScript, Tailwind CSS, and GSAP.",
+    "I'm a full-stack web developer based in Casablanca, Morocco. My background combines multimedia and code: a diploma in multimedia development, followed by a full-stack web development program at 3w Academy.",
+    "From July 2019 to November 2026, I worked at Eliott & Markus., where I developed 48 websites for agency clients, mostly law firms, consultancies, and professional-services firms in France. Working from designs supplied by the agency's designers, I built custom WordPress themes from scratch in PHP, added custom functionality, and turned each design into a responsive website with GSAP animations.",
+    "Alongside client work, I build modern web applications with React, Next.js, TypeScript, and Tailwind CSS, such as Resumely, a browser-based CV builder.",
+    "I'm open to freelance projects and full-time roles, working remotely or on-site in Casablanca.",
   ],
   avatar: "/avatar.jpeg",
   resume: "/imrane-labrahimi-cv.pdf",
@@ -17,9 +25,15 @@ export const experience: Experience[] = [
   {
     role: "Full-Stack Web Developer",
     company: "Eliott & Markus.",
-    period: "2019 — 2026",
+    period: "Jul 2019 — Nov 2026",
     description:
-      "Built custom WordPress websites from design handoff to launch, along with supporting materials such as newsletters and email signatures.",
+      "Developed custom websites for the agency's clients, from supplied designs through launch.",
+    highlights: [
+      "Developed 48 client websites, mainly for law firms, consultancies, and professional-services firms in France.",
+      "Built custom WordPress themes from scratch in PHP, with custom functionality for each project.",
+      "Turned designs supplied by the agency's designers into responsive websites, with animations built in GSAP.",
+      "Created supporting materials such as newsletters and email signatures.",
+    ],
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP", "Figma", "Adobe XD"],
   },
   {
@@ -42,22 +56,22 @@ export const experience: Experience[] = [
 
 export const education: Education[] = [
   {
-    degree: "Full-Stack Web Developer Training",
+    degree: "Full-Stack Web Developer Bootcamp",
     school: "3w Academy Maroc",
-    period: "2018 — 2019",
-    description: "Completed a full-stack web development program covering both front-end and back-end development.",
+    period: "Oct 2018 – Jan 2019",
+    description: "Completed an intensive 3-month bootcamp focused on front-end and back-end web development.",
   },
   {
-    degree: "Diploma in Multimedia Development",
-    school: "Institut Spécialisé des Arts Graphiques",
-    period: "2016 — 2018",
-    description: "Completed a diploma program in multimedia development.",
+    degree: "Specialized Technician Diploma in Multimedia Development",
+    school: "ISTA Arts Graphiques",
+    period: "Sept 2016 – Jul 2018",
+    description: "",
   },
   {
-    degree: "Baccalauréat in Life and Earth Sciences",
-    school: "Lycée Al Baroudi",
-    period: "2015 — 2016",
-    description: "Completed secondary education with a focus on Life and Earth Sciences.",
+    degree: "High School Diploma in Life and Earth Sciences",
+    school: "Al Baroudi High School",
+    period: "Sept 2015 — Jun 2016",
+    description: "",
   },
 ]
 
@@ -65,10 +79,9 @@ export const projects: Project[] = [
   // 2026 Projects
 
   {
-    id: 51,
+    id: 1,
     title: "Humbert | Stasse",
-    description:
-      "Website for Humbert | Stasse, a Paris law firm advising companies and executives on business criminal law, compliance, internal investigations, and cross-border matters.",
+    description: "Website for a Paris law firm advising companies and executives on business criminal law, compliance, internal investigations, and cross-border matters.",
     image: "/projects/hs.png",
     category: "Legal Services",
     year: "2026",
@@ -78,12 +91,10 @@ export const projects: Project[] = [
     live: "https://www.humbert-stasse.com/",
     github: "",
   },
-
   {
-    id: 50,
+    id: 2,
     title: "Harpers Legal",
-    description:
-      "Website for Harpers Legal, an independent Monaco-based legal advisory firm serving international entrepreneurs, individuals, and families across wealth structuring, business law, real estate, and relocation.",
+    description: "Website for an independent Monaco-based legal advisory firm serving international entrepreneurs, individuals, and families across wealth structuring, business law, real estate, and relocation.",
     image: "/projects/harpers.png",
     category: "Legal Services",
     year: "2026",
@@ -94,10 +105,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 49,
+    id: 3,
     title: "IMT Partners",
-    description:
-      "Corporate website for IMT Partners, a management transition firm connecting organizations with experienced managers to lead strategic transformations.",
+    description: "Corporate website for a management transition firm connecting organizations with experienced managers to lead strategic transformations.",
     image: "/projects/imt.png",
     category: "Consulting",
     year: "2026",
@@ -107,16 +117,15 @@ export const projects: Project[] = [
     live: "https://www.imt-partners.com/",
     github: "",
   },
-
   {
-    id: 48,
+    id: 4,
     title: "Resumely",
     description:
       "A browser-based CV builder for creating and previewing resumes, with editable sections, ATS analysis, and PDF export.",
-    image: "",
+    image: "/projects/resumely.png",
     category: "Career Tools",
     year: "2026",
-    type: "sideprojects",
+    type: "ai-assisted-sdd",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     featured: true,
     live: "https://resumely-career.vercel.app/",
@@ -125,12 +134,11 @@ export const projects: Project[] = [
 
   // 2025 Projects
   {
-    id: 53,
+    id: 5,
     title: "Bossard Groupe",
-    description:
-      "Website for Bossard Groupe, an accounting and business advisory firm offering HR and payroll services, auditing, financial expertise, and strategic consulting.",
+    description: "Website for an accounting and business advisory firm offering HR and payroll services, auditing, financial expertise, and strategic consulting.",
     image: "/projects/bossard-groupe.png",
-    category: "Business Services",
+    category: "Accounting & Advisory",
     year: "2025",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
@@ -139,10 +147,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 52,
+    id: 6,
     title: "ESG Lab & Society",
-    description:
-      "Website for ESG Lab & Society, a community of business leaders and experts helping organizations integrate ESG priorities into their strategies and sustainable transformation.",
+    description: "Website for a community of business leaders and experts helping organizations integrate ESG priorities into their strategies and sustainable transformation.",
     image: "/projects/esglab.png",
     category: "Sustainability",
     year: "2025",
@@ -153,9 +160,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 1,
+    id: 7,
     title: "Robine Experts Immobiliers",
-    description: "Website for Robine, an independent real-estate valuation firm, presenting its services, property sectors, team, and expert insights.",
+    description: "Website for an independent real-estate valuation firm, presenting its services, property sectors, team, and expert insights.",
     image: "/projects/robine.png",
     category: "Real Estate",
     year: "2025",
@@ -166,8 +173,8 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 2,
-    title: "Alkeom M&A LAW",
+    id: 8,
+    title: "Alkeom M&A Law",
     description: "Website for an independent business law firm advising entrepreneurs and investors on M&A, fundraising, corporate strategy, and governance.",
     image: "/projects/alkeom.png",
     category: "Legal Services",
@@ -179,7 +186,7 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 3,
+    id: 9,
     title: "Jensen & Schweblin",
     description: "Website for a law firm specializing in legal, strategic, and regulatory support for lawyers and other regulated professions.",
     image: "/projects/jensen.png",
@@ -192,7 +199,7 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 4,
+    id: 10,
     title: "BCCL Avocats",
     description: "Website for a law firm specializing in public business law, with expertise in public procurement, construction, urban planning, and public-sector litigation.",
     image: "/projects/bccl.png",
@@ -205,9 +212,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 5,
+    id: 11,
     title: "Kalder",
-    description: "Website for Kalder, a business law firm advising companies on technology, data protection, innovation, transactions, and disputes.",
+    description: "Website for a business law firm advising companies on technology, data protection, innovation, transactions, and disputes.",
     image: "/projects/kalder.png",
     category: "Legal Services",
     year: "2025",
@@ -218,7 +225,7 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 6,
+    id: 12,
     title: "Filali Kadiri & Associés",
     description: "Website for a Casablanca-based business law firm, presenting its legal advisory, transactions, litigation, and expertise across key industries.",
     image: "/projects/filali.png",
@@ -231,24 +238,24 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 47,
+    id: 13,
     title: "Hora Tek",
-    description: "Website showcasing HORA TEK’s security and workforce-management solutions, including time tracking, access control, anti-theft systems, and home automation.",
+    description: "Website showcasing Hora Tek's security and workforce-management solutions, including time tracking, access control, anti-theft systems, and home automation.",
     image: "/projects/horatek.png",
     category: "Technology",
     year: "2025",
-    type: "vibecoding",
+    type: "ai-assisted-sdd",
     technologies: ["Next.js", "Tailwind CSS", "shadcn/ui"],
-    featured: true,
+    featured: false,
     live: "https://horatek.vercel.app/",
     github: "https://github.com/labrahimiimrane/horatek",
   },
 
   // 2024 Projects
   {
-    id: 7,
+    id: 14,
     title: "Inlo Avocats",
-    description: "Website for INLO Avocats, presenting its legal expertise, strategic advisory approach, and work with clients in Paris and Marseille.",
+    description: "Website for a law firm working with clients in Paris and Marseille, presenting its legal expertise and strategic advisory approach.",
     image: "/projects/inlo.png",
     category: "Legal Services",
     year: "2024",
@@ -259,9 +266,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 8,
+    id: 15,
     title: "137 Notaires",
-    description: "Website for 137 Notaires, presenting notarial services and personalized legal, tax, and financial guidance for individuals, businesses, and public organizations.",
+    description: "Website for a notarial office, presenting its services and personalized legal, tax, and financial guidance for individuals, businesses, and public organizations.",
     image: "/projects/137_notaires.png",
     category: "Legal Services",
     year: "2024",
@@ -272,9 +279,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 9,
+    id: 16,
     title: "Garbarini",
-    description: "Website for Garbarini, a Paris law firm focused on business litigation and criminal defense.",
+    description: "Website for a Paris law firm focused on business litigation and criminal defense.",
     image: "/projects/garbarini.png",
     category: "Legal Services",
     year: "2024",
@@ -285,9 +292,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 10,
+    id: 17,
     title: "ACD Avocats",
-    description: "Website for ACD Avocats, presenting its business law services in corporate, employment, tax, real estate, and litigation matters.",
+    description: "Website for a business law firm, presenting its corporate, employment, tax, real estate, and litigation services.",
     image: "/projects/acd.png",
     category: "Legal Services",
     year: "2024",
@@ -298,9 +305,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 11,
+    id: 18,
     title: "Jarod Legal",
-    description: "Website for Jarod Legal, a recruitment firm connecting legal and tax professionals with companies and law firms.",
+    description: "Website for a recruitment firm connecting legal and tax professionals with companies and law firms.",
     image: "/projects/jarod_legal.png",
     category: "Recruitment",
     year: "2024",
@@ -311,9 +318,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 12,
+    id: 19,
     title: "Change Cabinet d'Avocats",
-    description: "Website for Change Legal, a law firm advising businesses and investors on mergers and acquisitions, financial regulation, corporate governance, and securities litigation.",
+    description: "Website for a law firm advising businesses and investors on mergers and acquisitions, financial regulation, corporate governance, and securities litigation.",
     image: "/projects/change.png",
     category: "Legal Services",
     year: "2024",
@@ -324,9 +331,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 13,
+    id: 20,
     title: "Grandjean Avocats",
-    description: "Website for Grandjean Avocats, an independent law firm focused on preventing and resolving disputes through litigation, arbitration, and mediation.",
+    description: "Website for an independent law firm focused on preventing and resolving disputes through litigation, arbitration, and mediation.",
     image: "/projects/grandjean.png",
     category: "Legal Services",
     year: "2024",
@@ -339,9 +346,9 @@ export const projects: Project[] = [
 
   // 2023 Projects
   {
-    id: 14,
+    id: 21,
     title: "OAK Clinic",
-    description: "Website for OAK Clinic, a collaborative care center connecting patients with complementary health and wellness practitioners in Paris and Casablanca. It presents therapies, practitioners, appointment details, and workplace wellness services.",
+    description: "Website for a collaborative care center connecting patients with complementary health and wellness practitioners in Paris and Casablanca, presenting therapies, practitioners, appointment details, and workplace wellness services.",
     image: "/projects/oak.png",
     category: "Healthcare",
     year: "2023",
@@ -352,9 +359,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 15,
-    title: "Le Prado Gilbert",
-    description: "Website for Le Prado & Gilbert, a law firm representing clients before France’s highest courts and administrative courts, including the Conseil d’État and Cour de cassation.",
+    id: 22,
+    title: "Le Prado & Gilbert",
+    description: "Website for a law firm representing clients before France's highest courts and administrative courts, including the Conseil d'État and Cour de cassation.",
     image: "/projects/le_prado_gilbert.png",
     category: "Legal Services",
     year: "2023",
@@ -365,9 +372,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 16,
+    id: 23,
     title: "Abeille Avocats",
-    description: "Website for Abeille Avocats, a full-service law firm presenting its legal expertise, team, and offices across France.",
+    description: "Website for a full-service law firm, presenting its legal expertise, team, and offices across France.",
     image: "/projects/abeille_law.png",
     category: "Legal Services",
     year: "2023",
@@ -378,9 +385,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 17,
-    title: "EHA Consulting",
-    description: "Website for EH&A, a crisis management consultancy offering crisis preparation, risk prevention, reputation management, and 24/7 response support. The firm is now part of DGA Group.",
+    id: 24,
+    title: "EH&A Consulting",
+    description: "Website for a crisis management consultancy offering crisis preparation, risk prevention, reputation management, and 24/7 response support. The firm is now part of DGA Group.",
     image: "/projects/eha_consulting.png",
     category: "Consulting",
     year: "2023",
@@ -391,11 +398,11 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 18,
-    title: "Paris Place De Droit",
-    description: "Website for Paris Place de Droit, an association promoting Paris as an international legal hub through events, professional networks, and legal resources.",
+    id: 25,
+    title: "Paris Place de Droit",
+    description: "Website for an association promoting Paris as an international legal hub through events, professional networks, and legal resources.",
     image: "/projects/ppd.png",
-    category: "Organization",
+    category: "Legal Organizations",
     year: "2023",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
@@ -404,11 +411,11 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 19,
+    id: 26,
     title: "OMID",
     description: "Platform for the World Observatory of Legal Indicators, bringing global legal indicators together with tools to explore and compare data by country and indicator.",
     image: "/projects/omid.png",
-    category: "Legal Tech",
+    category: "Legal Organizations",
     year: "2023",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
@@ -417,9 +424,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 20,
+    id: 27,
     title: "Bartholdi (Gide x Regimbeau)",
-    description: "Website for Gide x Regimbeau – Patent Litigation, a partnership of lawyers and patent attorneys focused on French and European patent disputes.",
+    description: "Website for a partnership of lawyers and patent attorneys focused on French and European patent disputes.",
     image: "/projects/bartholdi.png",
     category: "Legal Services",
     year: "2023",
@@ -430,9 +437,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 21,
+    id: 28,
     title: "Arion Venture Capital",
-    description: "Website for Arion VC, a family office supporting early-stage companies working on social, environmental, and ethical challenges.",
+    description: "Website for a family office supporting early-stage companies working on social, environmental, and ethical challenges.",
     image: "/projects/arion.png",
     category: "Finance",
     year: "2023",
@@ -443,7 +450,7 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 22,
+    id: 29,
     title: "Facture Électronique France",
     description: "A free information portal helping French businesses understand and prepare for the transition to electronic invoicing, with tailored guidance, an assessment questionnaire, and updates.",
     image: "/projects/audecia.png",
@@ -456,9 +463,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 23,
+    id: 30,
     title: "Avanty Avocats",
-    description: "Website for Avanty Avocats, a specialist law firm advising on executive compensation, employee benefits, and insurance distribution.",
+    description: "Website for a specialist law firm advising on executive compensation, employee benefits, and insurance distribution.",
     image: "/projects/avanty.png",
     category: "Legal Services",
     year: "2023",
@@ -471,11 +478,11 @@ export const projects: Project[] = [
 
   // 2022 Projects
   {
-    id: 24,
-    title: "Mr Capital",
-    description: "Website for MR Capital, a Paris-based audit and accounting firm specializing in the technology sector, with services including statutory auditing, accounting, and business valuation.",
+    id: 31,
+    title: "MR Capital",
+    description: "Website for a Paris-based audit and accounting firm specializing in the technology sector, with services including statutory auditing, accounting, and business valuation.",
     image: "/projects/mrcapital.png",
-    category: "Finance",
+    category: "Accounting & Advisory",
     year: "2022",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
@@ -484,9 +491,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 25,
+    id: 32,
     title: "Cabanes Avocats",
-    description: "Website for CABANES Avocats, a law firm specializing in public business law, including public contracts, local government, urban planning, and related litigation.",
+    description: "Website for a law firm specializing in public business law, including public contracts, local government, urban planning, and related litigation.",
     image: "/projects/cabanes-avocats.png",
     category: "Legal Services",
     year: "2022",
@@ -497,9 +504,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 26,
+    id: 33,
     title: "Rivière Avocats",
-    description: "Website for Rivière Avocats Associés, a law firm specializing in complex real estate, urban planning, and land development matters.",
+    description: "Website for a law firm specializing in complex real estate, urban planning, and land development matters.",
     image: "/projects/riviereavocats.png",
     category: "Legal Services",
     year: "2022",
@@ -510,9 +517,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 27,
+    id: 34,
     title: "Regimbeau Creative IP",
-    description: "Website for Regimbeau, presenting its intellectual property services for protecting, managing, and commercializing patents, trademarks, and other innovations.",
+    description: "Website for an intellectual property firm, presenting its services for protecting, managing, and commercializing patents, trademarks, and other innovations.",
     image: "/projects/regimbeau.png",
     category: "Legal Services",
     year: "2022",
@@ -523,9 +530,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 28,
+    id: 35,
     title: "Newera Avocats",
-    description: "Website for NEWERA Avocats, a law firm specializing in family and estate law, including matters involving couples, children, family assets, and international families.",
+    description: "Website for a law firm specializing in family and estate law, including matters involving couples, children, family assets, and international families.",
     image: "/projects/newera-avocats.png",
     category: "Legal Services",
     year: "2022",
@@ -538,11 +545,11 @@ export const projects: Project[] = [
 
   // 2021 Projects
   {
-    id: 29,
+    id: 36,
     title: "CNAJMJ",
     description: "Website for the French National Council of Judicial Administrators and Representatives, with professional resources, a directory, training, and guidance for businesses facing financial difficulties.",
     image: "/projects/cnajmj.png",
-    category: "Organization",
+    category: "Legal Organizations",
     year: "2021",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
@@ -551,9 +558,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 30,
-    title: "PRODUCT LAW FIRM",
-    description: "Website for Product Law Firm, a specialist legal practice advising businesses on product regulation and compliance throughout a product’s lifecycle, from development to recall.",
+    id: 37,
+    title: "Product Law Firm",
+    description: "Website for a specialist legal practice advising businesses on product regulation and compliance throughout a product's lifecycle, from development to recall.",
     image: "/projects/product-lawfirm.png",
     category: "Legal Services",
     year: "2021",
@@ -564,22 +571,22 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 31,
+    id: 38,
     title: "Cornillier Avocats",
-    description: "Website for Cornillier Avocats, a law firm advising responsible businesses and social-impact organizations on business and employment law.",
+    description: "Website for a law firm advising responsible businesses and social-impact organizations on business and employment law.",
     image: "/projects/cornillier-avocats.png",
     category: "Legal Services",
     year: "2021",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
-    featured: false,
+    featured: true,
     live: "https://www.cornillier-avocats.com/",
     github: "",
   },
   {
-    id: 32,
-    title: "Loucif & Co",
-    description: "Website for Loucif + Co, an Algiers-based business law firm advising local and international clients on corporate, investment, energy, and other commercial matters.",
+    id: 39,
+    title: "Loucif + Co",
+    description: "Website for an Algiers-based business law firm advising local and international clients on corporate, investment, energy, and other commercial matters.",
     image: "/projects/loucif.png",
     category: "Legal Services",
     year: "2021",
@@ -590,9 +597,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 33,
+    id: 40,
     title: "Peyrical & Sabatier Avocats",
-    description: "Website for Peyrical & Sabatier a law firm advising public and private clients on public business law, including public contracts and administrative litigation.",
+    description: "Website for a law firm advising public and private clients on public business law, including public contracts and administrative litigation.",
     image: "/projects/ps-avocats.png",
     category: "Legal Services",
     year: "2021",
@@ -603,9 +610,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 34,
+    id: 41,
     title: "Urban Act Avocats",
-    description: "Website for Urban Act Avocats, a law firm advising real estate and PropTech clients on urban planning, construction, property law, and related disputes.",
+    description: "Website for a law firm advising real estate and PropTech clients on urban planning, construction, property law, and related disputes.",
     image: "/projects/urbanactavocats.png",
     category: "Legal Services",
     year: "2021",
@@ -616,9 +623,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 35,
+    id: 42,
     title: "Sébastien Baert",
-    description: "Website for Sébastien Baert, an executive and team coach presenting his coaching, organizational consulting, workshops, and training services.",
+    description: "Website for an executive and team coach, presenting his coaching, organizational consulting, workshops, and training services.",
     image: "/projects/sebastien-baert.png",
     category: "Consulting",
     year: "2021",
@@ -629,9 +636,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 36,
+    id: 43,
     title: "NOOA Avocats",
-    description: "Website for NOOA Avocats, a law firm advising life-sciences, health, beauty, and wellness businesses on regulatory, legal, and strategic matters.",
+    description: "Website for a law firm advising life-sciences, health, beauty, and wellness businesses on regulatory, legal, and strategic matters.",
     image: "/projects/nooalegal.png",
     category: "Legal Services",
     year: "2021",
@@ -642,24 +649,24 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 37,
+    id: 44,
     title: "Avenir Formation",
-    description: "Website for Avenir Formation, a Moroccan training provider offering professional courses in transport, logistics, HSE, and related industries.",
+    description: "Website for a Moroccan training provider offering professional courses in transport, logistics, HSE, and related industries.",
     image: "/projects/avenir-formation.png",
     category: "Education",
     year: "2021",
     type: "freelance",
     technologies: ["WordPress", "PHP", "CSS3", "JavaScript", "GSAP"],
     featured: true,
-    live: "https://avenirformation.ma/",
+    live: "https://web.archive.org/web/20211219074503/https://avenirformation.ma/",
     github: "",
   },
 
   // 2020 Projects
   {
-    id: 38,
+    id: 45,
     title: "FTPA Avocats",
-    description: "Website for FTPA Avocats, presenting the firm’s legal expertise, industry sectors, team, and recent work for clients.",
+    description: "Website for a law firm, presenting its legal expertise, industry sectors, team, and recent work for clients.",
     image: "/projects/ftpa.png",
     category: "Legal Services",
     year: "2020",
@@ -670,9 +677,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 39,
+    id: 46,
     title: "Chemouli Avocats",
-    description: "Website for Chemouli Professions Libérales, a law firm helping professionals structure their practices, manage partnerships, and navigate business transitions.",
+    description: "Website for a law firm helping professionals structure their practices, manage partnerships, and navigate business transitions.",
     image: "/projects/chemouli.png",
     category: "Legal Services",
     year: "2020",
@@ -683,7 +690,7 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 40,
+    id: 47,
     title: "Comolet Zanati Avocats",
     description: "Website presenting a law firm and its legal services.",
     image: "/projects/comoletzanati.png",
@@ -696,11 +703,11 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 41,
+    id: 48,
     title: "Fidexia Business Services",
-    description: "Website for Fidexia Business Services, presenting its accounting, audit, finance, legal, HR, and business advisory services.",
+    description: "Website for an accounting and business advisory firm, presenting its accounting, audit, finance, legal, HR, and advisory services.",
     image: "/projects/fidexia.png",
-    category: "Business Services",
+    category: "Accounting & Advisory",
     year: "2020",
     type: "agency",
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "GSAP"],
@@ -709,9 +716,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 42,
+    id: 49,
     title: "Arias Notaires",
-    description: "Website for Arias Notaires, presenting notarial services in real estate, family and estate matters, business property, and document certification.",
+    description: "Website for a notarial office, presenting its services in real estate, family and estate matters, business property, and document certification.",
     image: "/projects/arias-notaires.png",
     category: "Legal Services",
     year: "2020",
@@ -722,9 +729,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 43,
+    id: 50,
     title: "Blatter Seynaeve Avocats",
-    description: "Website for Blatter Seynaeve, a law firm specializing in commercial leases and real estate law, with advisory and litigation services.",
+    description: "Website for a law firm specializing in commercial leases and real estate law, with advisory and litigation services.",
     image: "/projects/blatter.png",
     category: "Legal Services",
     year: "2020",
@@ -735,9 +742,9 @@ export const projects: Project[] = [
     github: "",
   },
   {
-    id: 44,
+    id: 51,
     title: "Noval Avocats",
-    description: "Website for Noval Avocats, a law firm advising independent professionals on structuring, developing, and transferring their businesses.",
+    description: "Website for a law firm advising independent professionals on structuring, developing, and transferring their businesses.",
     image: "/projects/novalavocats.png",
     category: "Legal Services",
     year: "2020",
@@ -751,7 +758,7 @@ export const projects: Project[] = [
   // 2019 Projects
   /*
   {
-    id: 45,
+    id: 52,
     title: "RNIB",
     description: "Website presenting a business intelligence firm and its services.",
     image: "",
@@ -766,12 +773,23 @@ export const projects: Project[] = [
   */
 ]
 
-export const skills = {
-  frontend: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS", "GSAP"],
-  backend: ["PHP", "Node.js", "Express"],
-  database: ["MongoDB", "PostgreSQL", "MySQL"],
-  cms: ["WordPress", "Strapi.js"],
-}
+export const skills: SkillGroup[] = [
+  {
+    label: "Frontend",
+    items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "GSAP"],
+  },
+  { label: "Backend", items: ["PHP", "Node.js", "Express", "MySQL", "PostgreSQL", "MongoDB"] },
+  { label: "CMS", items: ["WordPress", "Strapi"] },
+  { label: "Design Tools", items: ["Figma", "Adobe XD"] },
+  { label: "Development Workflow", items: ["Git", "Spec-Driven Development", "Claude Code", "Codex", "Cursor"] },
+]
+
+/** Proof points shown on the home page; the project count is derived from the list above. */
+export const proofPoints = [
+  { value: personalInfo.yearsOfExperience, label: "Years of experience" },
+  { value: `${Math.floor(projects.length / 10) * 10}+`, label: "Projects delivered" },
+  { value: "International", label: "Clients in France and Morocco" },
+]
 
 export const socialLinks = {
   github: "https://github.com/labrahimiimrane",
@@ -791,7 +809,14 @@ export interface Experience {
   company: string
   period: string
   description: string
+  /** Optional bullet points shown under the description */
+  highlights?: string[]
   technologies: string[]
+}
+
+export interface SkillGroup {
+  label: string
+  items: string[]
 }
 
 export interface Education {
@@ -805,7 +830,7 @@ export type ProjectType =
   | "agency"
   | "freelance"
   | "sideprojects"
-  | "vibecoding"
+  | "ai-assisted-sdd"
 
 export interface Project {
   id: number
@@ -815,6 +840,8 @@ export interface Project {
   category: string
   year: string
   type: ProjectType
+  /** What I built; defaults to the label for the project type in lib/project-types.ts */
+  role?: string
   technologies: string[]
   featured: boolean
   live: string

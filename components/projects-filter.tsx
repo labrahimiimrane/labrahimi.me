@@ -1,10 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import type { Project, ProjectType } from "@/lib/data"
-import { PROJECT_TYPE_LABELS, PROJECT_TYPE_STYLES } from "@/lib/project-types"
-import { ExternalLink, Github, Briefcase, User, Filter, Code, Sparkles } from "lucide-react"
+import { ProjectCard } from "@/components/project-card"
+import { Briefcase, User, Filter, Code, Sparkles } from "lucide-react"
 
 type FilterType = "all" | ProjectType
 
@@ -37,85 +36,12 @@ const FILTERS: {
     activeClass: "bg-purple-500/20 border-purple-500/30 text-purple-200",
   },
   {
-    type: "vibecoding",
-    label: "Vibe Coding",
+    type: "ai-assisted-sdd",
+    label: "AI-Assisted (SDD)",
     icon: Sparkles,
     activeClass: "bg-rose-500/20 border-rose-500/30 text-rose-200",
   },
 ]
-
-function ProjectCard({ project }: { project: Project }) {
-  return (
-    <div className="minimal-card overflow-hidden group">
-      <div className="relative h-48 bg-gray-900 overflow-hidden">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-
-        <div className="absolute bottom-3 right-3">
-          <span
-            className={`px-3 py-1.5 text-xs rounded-lg font-semibold shadow-lg ${
-              PROJECT_TYPE_STYLES[project.type]
-            }`}
-          >
-            {PROJECT_TYPE_LABELS[project.type]}
-          </span>
-        </div>
-
-        <div className="absolute top-3 right-3 flex space-x-2 transition-opacity [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 group-focus-within:opacity-100">
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Visit the ${project.title} website (opens in a new tab)`}
-              className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
-            >
-              <ExternalLink size={14} className="text-white" />
-            </a>
-          )}
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View the ${project.title} source code on GitHub (opens in a new tab)`}
-              className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
-            >
-              <Github size={14} className="text-white" />
-            </a>
-          )}
-        </div>
-      </div>
-
-      <div className="p-6 flex-1 flex flex-col">
-        <div className="flex justify-between items-center mb-2">
-          <h2 className="font-medium">{project.title}</h2>
-          <span className="text-xs text-subtle">{project.year}</span>
-        </div>
-
-        <p className="text-sm text-muted mb-2">{project.category}</p>
-        <p className="text-sm text-muted mb-4 leading-relaxed">
-          {project.description}
-        </p>
-
-        <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-1 rounded-lg text-xs bg-white/5 border border-white/10 text-subtle"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export function ProjectsFilter({ projects }: ProjectsFilterProps) {
   const [activeFilter, setActiveFilter] = useState<FilterType>("all")
@@ -139,7 +65,7 @@ export function ProjectsFilter({ projects }: ProjectsFilterProps) {
       agency: 0,
       freelance: 0,
       sideprojects: 0,
-      vibecoding: 0,
+      "ai-assisted-sdd": 0,
     },
   )
 
@@ -196,7 +122,7 @@ export function ProjectsFilter({ projects }: ProjectsFilterProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} headingLevel="h2" />
         ))}
       </div>
 

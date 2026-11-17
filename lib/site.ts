@@ -8,8 +8,7 @@ export const siteName = personalInfo.name
 
 export const defaultTitle = `${personalInfo.name} | ${personalInfo.title}`
 
-export const defaultDescription =
-  "Explore the portfolio of Labrahimi Imrane, a full-stack web developer in Casablanca, Morocco, with 6+ years of experience building websites with WordPress, React, and Next.js."
+export const defaultDescription = `${personalInfo.name}, full-stack web developer in Casablanca, Morocco: ${personalInfo.yearsOfExperience} years building custom WordPress websites and web applications. Open to freelance and full-time roles.`
 
 /** X handle derived from the profile URL in lib/data.ts, e.g. "@Imrane_II". */
 export const xHandle = socialLinks.x ? `@${socialLinks.x.replace(/\/+$/, "").split("/").pop()}` : undefined
