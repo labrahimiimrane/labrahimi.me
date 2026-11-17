@@ -1,5 +1,14 @@
+import type { Metadata } from "next"
 import { projects } from "@/lib/data"
 import { ProjectsFilter } from "@/components/projects-filter"
+import { pageMetadata } from "@/lib/site"
+
+export const metadata: Metadata = pageMetadata({
+  title: "Projects",
+  description:
+    "Websites built by Labrahimi Imrane for law firms, consultancies, and businesses, plus personal projects, using WordPress, PHP, GSAP, React, and Next.js.",
+  path: "/projects",
+})
 
 export default function Projects() {
   return (

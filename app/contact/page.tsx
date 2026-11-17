@@ -1,7 +1,16 @@
+import type { Metadata } from "next"
 import { Mail, MapPin, Phone, Clock } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import { pageMetadata } from "@/lib/site"
 import { SocialLinks } from "@/components/social-links"
 import { ContactForm } from "@/components/contact-form"
+
+export const metadata: Metadata = pageMetadata({
+  title: "Contact",
+  description:
+    "Contact Labrahimi Imrane, a full-stack web developer in Casablanca, Morocco, available for work and freelance website projects.",
+  path: "/contact",
+})
 
 export default function Contact() {
   return (

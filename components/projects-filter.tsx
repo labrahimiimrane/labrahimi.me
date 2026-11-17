@@ -65,12 +65,13 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute top-3 right-3 flex space-x-2 transition-opacity [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 group-focus-within:opacity-100">
           {project.live && (
             <a
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visit the ${project.title} website (opens in a new tab)`}
               className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
             >
               <ExternalLink size={14} className="text-white" />
@@ -81,6 +82,7 @@ function ProjectCard({ project }: { project: Project }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`View the ${project.title} source code on GitHub (opens in a new tab)`}
               className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
             >
               <Github size={14} className="text-white" />
@@ -91,7 +93,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex justify-between items-center mb-2">
-          <h3 className="font-medium">{project.title}</h3>
+          <h2 className="font-medium">{project.title}</h2>
           <span className="text-xs text-subtle">{project.year}</span>
         </div>
 
@@ -146,11 +148,15 @@ export function ProjectsFilter({ projects }: ProjectsFilterProps) {
       <div className="mb-12">
         <div className="flex items-center space-x-4 mb-6">
           <Filter size={18} className="text-muted" />
-          <span className="text-sm text-muted">Filter by type:</span>
+          <span id="project-filter-label" className="text-sm text-muted">
+            Filter by type:
+          </span>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div role="group" aria-labelledby="project-filter-label" className="flex flex-wrap gap-3">
           <button
+            type="button"
+            aria-pressed={activeFilter === "all"}
             onClick={() => setActiveFilter("all")}
             className={`px-4 py-2 text-sm rounded-lg border transition-all duration-200 ${
               activeFilter === "all"
@@ -169,6 +175,8 @@ export function ProjectsFilter({ projects }: ProjectsFilterProps) {
             return (
               <button
                 key={type}
+                type="button"
+                aria-pressed={activeFilter === type}
                 onClick={() => setActiveFilter(type)}
                 className={`px-4 py-2 text-sm rounded-lg border transition-all duration-200 flex items-center space-x-2 ${
                   activeFilter === type
@@ -191,6 +199,10 @@ export function ProjectsFilter({ projects }: ProjectsFilterProps) {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
+
+      <p className="sr-only" aria-live="polite">
+        {`Showing ${filteredProjects.length} ${filteredProjects.length === 1 ? "project" : "projects"}`}
+      </p>
 
       {filteredProjects.length === 0 && (
         <div className="text-center py-20">

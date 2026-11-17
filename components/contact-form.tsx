@@ -67,20 +67,23 @@ export function ContactForm() {
 
   return (
     <>
-      {/* Status Message */}
-      {submitStatus.type && (
-        <div
-          className={`mb-6 p-4 rounded-lg ${
-            submitStatus.type === "success"
-              ? "bg-green-500/10 border border-green-500/20 text-green-400"
-              : "bg-red-500/10 border border-red-500/20 text-red-400"
-          }`}
-        >
-          {submitStatus.message}
-        </div>
-      )}
+      {/* Status Message: the wrapper is always rendered so screen readers announce updates */}
+      <div aria-live="polite" aria-atomic="true">
+        {submitStatus.type && (
+          <div
+            role={submitStatus.type === "error" ? "alert" : "status"}
+            className={`mb-6 p-4 rounded-lg ${
+              submitStatus.type === "success"
+                ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                : "bg-red-500/10 border border-red-500/20 text-red-400"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        )}
+      </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="space-y-6">
         {/* Honeypot: off-screen and skipped by keyboard/screen readers; only bots fill it in */}
         <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
           <label htmlFor="website">Website</label>
@@ -104,6 +107,8 @@ export function ContactForm() {
             name="name"
             type="text"
             required
+            maxLength={100}
+            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
             disabled={isSubmitting}
@@ -121,6 +126,8 @@ export function ContactForm() {
             name="email"
             type="email"
             required
+            maxLength={254}
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             disabled={isSubmitting}
@@ -137,6 +144,7 @@ export function ContactForm() {
             id="message"
             name="message"
             required
+            maxLength={5000}
             value={formData.message}
             onChange={handleChange}
             disabled={isSubmitting}
@@ -153,12 +161,12 @@ export function ContactForm() {
         >
           {isSubmitting ? (
             <>
-              <div className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+              <div aria-hidden="true" className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
               <span>Sending...</span>
             </>
           ) : (
             <>
-              <Send size={16} />
+              <Send size={16} aria-hidden="true" />
               <span>Send message</span>
             </>
           )}

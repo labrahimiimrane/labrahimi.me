@@ -1,8 +1,31 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Mail, Phone, MapPin, ExternalLink, Github } from "lucide-react"
-import { personalInfo, contactInfo, projects } from "@/lib/data"
+import type { Metadata } from "next"
+import { personalInfo, contactInfo, projects, socialLinks } from "@/lib/data"
 import { PROJECT_TYPE_LABELS, PROJECT_TYPE_STYLES } from "@/lib/project-types"
+import { defaultDescription, pageMetadata, siteUrl } from "@/lib/site"
+
+export const metadata: Metadata = pageMetadata({
+  description: defaultDescription,
+  path: "/",
+})
+
+// Structured data describing the portfolio owner, for search engines
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: personalInfo.name,
+  jobTitle: personalInfo.title,
+  url: siteUrl,
+  image: `${siteUrl}${personalInfo.avatar}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Casablanca",
+    addressCountry: "MA",
+  },
+  sameAs: Object.values(socialLinks).filter(Boolean),
+}
 
 export default function Home() {
   // Get featured projects and sort by year
@@ -16,6 +39,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen dot-grid">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
       <div className="max-w-6xl mx-auto px-6 py-20">
         {/* Hero Section */}
         <div className="mb-32">
@@ -71,8 +95,8 @@ export default function Home() {
 
             {/* Right side - Large profile image */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <div className="relative">
-                <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500 bg-gray-900">
+              <div className="relative w-full max-w-80 md:max-w-96">
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500 bg-gray-900">
                   <Image
                     src={personalInfo.avatar || "/placeholder.svg"}
                     alt={personalInfo.name}
@@ -92,11 +116,11 @@ export default function Home() {
 
         {/* Featured Work */}
         <div className="mb-20">
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 mb-12">
             <h2 className="text-2xl font-light text-white">Featured Projects</h2>
             <Link
               href="/projects"
-              className="flex items-center space-x-2 text-sm text-muted hover:opacity-80 transition-opacity group"
+              className="flex items-center space-x-2 text-sm text-muted whitespace-nowrap hover:opacity-80 transition-opacity group"
             >
               <span>Explore all projects</span>
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -106,7 +130,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
               <div key={project.id} className="group">
-                <div className="minimal-card overflow-hidden cursor-pointer hover:scale-[1.02] transition-all duration-300 h-full flex flex-col">
+                <div className="minimal-card overflow-hidden hover:scale-[1.02] transition-all duration-300 h-full flex flex-col">
                   <div className="relative h-40 overflow-hidden bg-gray-900">
                     <Image
                       src={project.image || "/placeholder.svg"}
@@ -123,12 +147,13 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute top-3 right-3 flex space-x-2 transition-opacity [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 group-focus-within:opacity-100">
                       {project.live && (
                         <a
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`Visit the ${project.title} website (opens in a new tab)`}
                           className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
                         >
                           <ExternalLink size={14} className="text-white" />
@@ -139,6 +164,7 @@ export default function Home() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`View the ${project.title} source code on GitHub (opens in a new tab)`}
                           className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-colors"
                         >
                           <Github size={14} className="text-white" />

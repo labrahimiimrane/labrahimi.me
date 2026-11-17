@@ -18,7 +18,7 @@ export function SocialLinks() {
       {links.map(
         ({ href, title, icon }) =>
           href && (
-            <a key={title} href={href} target="_blank" rel="noopener noreferrer" className={linkClassName} title={title}>
+            <a key={title} href={href} target="_blank" rel="noopener noreferrer" className={linkClassName} title={title} aria-label={`${title} (opens in a new tab)`}>
               {icon}
             </a>
           ),

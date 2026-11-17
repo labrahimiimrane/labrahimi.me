@@ -13,7 +13,16 @@ import {
   User,
 } from "lucide-react"
 import { SocialLinks } from "@/components/social-links"
+import type { Metadata } from "next"
 import { personalInfo, experience, education, skills, contactInfo } from "@/lib/data"
+import { pageMetadata } from "@/lib/site"
+
+export const metadata: Metadata = pageMetadata({
+  title: "About",
+  description:
+    "About Labrahimi Imrane, a full-stack web developer in Casablanca, Morocco, with 6+ years of experience in WordPress, PHP, React, and Next.js: skills, professional experience, and education.",
+  path: "/about",
+})
 
 const skillLabels: Record<keyof typeof skills, string> = {
   frontend: "Frontend Development",
@@ -41,9 +50,9 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-start md:sticky md:top-[30px]">
-              <div className="relative">
+              <div className="relative w-full max-w-80">
                 <div
-                  className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500"
+                  className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500"
                   style={{ backgroundColor: "var(--bg-secondary)" }}
                 >
                   <Image
@@ -123,7 +132,7 @@ export default function About() {
 
                     <a
                       href={personalInfo.resume}
-                      className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
+                      className="inline-flex items-center whitespace-nowrap space-x-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
                       download
                     >
                       <span>Download Resume</span>

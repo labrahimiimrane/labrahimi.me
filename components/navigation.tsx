@@ -15,7 +15,7 @@ export default function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+    <nav aria-label="Main" className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
       <div className="dock flex items-center space-x-2">
         {navigation.map((item) => {
           const Icon = item.icon
@@ -26,6 +26,8 @@ export default function Navigation() {
               href={item.href}
               className={`dock-item ${isActive ? "active dock-item-with-text" : ""}`}
               title={item.name}
+              aria-label={item.name}
+              aria-current={isActive ? "page" : undefined}
             >
               <Icon size={18} />
               {isActive && (
