@@ -801,7 +801,7 @@ export const contactInfo = {
   email: "labrahimiimrane@gmail.com",
   phone: "+212 609-936524",
   location: "Casablanca, Morocco",
-  timezone: "GMT (Africa/Casablanca)",
+  timezone: { id: "Africa/Casablanca", city: "Casablanca" },
 }
 
 export interface Experience {

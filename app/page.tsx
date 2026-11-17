@@ -51,7 +51,7 @@ export default function Home() {
                 <p className="text-xl md:text-2xl text-muted font-light">{personalInfo.title}</p>
               </div>
 
-              <div className="max-w-2xl mb-8 space-y-4">
+              <div className="lg:max-w-2xl mb-8 space-y-4">
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed">{personalInfo.homeIntro}</p>
                 <p className="text-base text-muted leading-relaxed">{personalInfo.homeSummary}</p>
               </div>
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
 
               {/* Proof points */}
-              <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-6 mt-10 pt-8 border-t border-white/10 max-w-xl">
+              <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-6 mt-10 pt-8 border-t border-white/10 lg:max-w-xl">
                 {proofPoints.map((point) => (
                   <div key={point.label} className="flex flex-col-reverse">
                     <dt className="text-xs text-subtle mt-1">{point.label}</dt>
